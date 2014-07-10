@@ -1,0 +1,29 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<data>
+	<row>
+		<city1>
+			<name>Paris</name>
+			<latitude>48.833333</latitude>
+			<longitude>2.333333</longitude>
+		</city1>
+		<city2>
+			<name>Praha</name>
+			<latitude>50.088611</latitude>
+			<longitude>14.421389</longitude>
+		</city2>
+		<distance>548,671</distance>
+	</row>
+	<row>
+		<city1>
+			<name>Madrid</name>
+			<latitude>40.4</latitude>
+			<longitude>-3.683333</longitude>
+		</city1>
+		<city2>
+			<name>Praha</name>
+			<latitude>50.088611</latitude>
+			<longitude>14.421389</longitude>
+		</city2>
+		<distance>654,304</distance>
+	</row>
+</data>

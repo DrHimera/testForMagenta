@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="basicstruts2" extends="struts-default">
+		<action name="resultAction" class="com.test.action.UserPage" method="execute">
+			<result name="success">WEB-INF/result.jsp</result>
+		</action>
+
+		<action name="calc" class="com.test.action.UserPage"
+			method="display">
+			<result name = "none">WEB-INF/index.jsp</result>
+		</action>
+		<action name="admin" class="com.test.action.AdminPage"
+			method="display">
+			<result name = "none">WEB-INF/admin.jsp</result>
+		</action>
+		
+		<action name="resultActionAdmin" class="com.test.action.AdminPage">
+			<interceptor-ref name="exception" />
+			<interceptor-ref name="i18n" />
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">text/xml</param>
+				<param name="maximumSize">10240</param>
+			</interceptor-ref>
+
+			<interceptor-ref name="params">
+				<param name="excludeParams">dojo\..*,^struts\..*</param>
+			</interceptor-ref>
+
+			<result name="success">WEB-INF/adminResult.jsp</result>
+
+		</action>
+
+	</package>
+
+</struts>
